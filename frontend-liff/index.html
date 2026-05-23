@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>美容預約系統</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>美容預約系統</h1>
+
+  <!-- LINE 狀態區 -->
+  <div id="userInfo">
+    <p>客戶姓名：<span id="userName">載入中...</span></p>
+    <p>LINE ID：<span id="userId">載入中...</span></p>
+  </div>
+
+  <hr>
+
+  <!-- 預約表單 -->
+  <form id="bookingForm">
+
+    <!-- 服務項目 -->
+    <label>服務項目</label><br>
+    <select id="service" required>
+      <option value="">請選擇服務</option>
+      <option value="剪髮">剪髮</option>
+      <option value="染髮">染髮</option>
+      <option value="護髮">護髮</option>
+      <option value="洗髮">洗髮</option>
+    </select>
+
+    <br><br>
+
+    <!-- 美容師 -->
+    <label>美容師</label><br>
+    <select id="designer" required>
+      <option value="">請選擇美容師</option>
+      <option value="Amy">Amy</option>
+      <option value="Bella">Bella</option>
+      <option value="Cindy">Cindy</option>
+    </select>
+
+    <br><br>
+
+    <!-- 日期 -->
+    <label>日期</label><br>
+    <input type="date" id="date" required>
+
+    <br><br>
+
+    <!-- 時間 -->
+    <label>時間</label><br>
+    <input type="time" id="time" required>
+
+    <br><br>
+
+    <!-- 備註 -->
+    <label>備註</label><br>
+    <textarea id="note" placeholder="有什麼特別需求嗎？"></textarea>
+
+    <br><br>
+
+    <!-- 送出 -->
+    <button type="submit">送出預約</button>
+
+  </form>
+
+  <hr>
+
+  <button id="loginBtn">LINE 登入</button>
+
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
