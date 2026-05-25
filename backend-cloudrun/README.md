@@ -31,7 +31,7 @@ backend-cloudrun 負責：
 
 # API Structure
 
-## Health
+## Health：測試後端有沒有活著(https://你的cloudrun/api/health)
 
 ```text
 GET /api/health
@@ -39,7 +39,7 @@ GET /api/health
 
 ---
 
-## Services
+## Services：取得服務項目
 
 ```text
 GET /api/services
@@ -47,7 +47,7 @@ GET /api/services
 
 ---
 
-## Slots
+## Slots：取得可預約時段
 
 ```text
 GET /api/slots
@@ -55,7 +55,7 @@ GET /api/slots
 
 ---
 
-## Bookings
+## Bookings：真正建立預約
 
 ```text
 POST /api/bookings
@@ -67,13 +67,13 @@ POST /api/bookings
 
 ```text
 src/
- ├── routes/
- ├── controllers/
- ├── services/
- ├── repositories/
- ├── middlewares/
- ├── utils/
- └── config/
+ ├── routes/            API 網址管理 ex:/api/bookings
+ ├── controllers/       接收前端資料
+ ├── services/          真正商業邏輯
+ ├── repositories/      專門操作資料庫 / Google Sheet
+ ├── middlewares/       API 守門員
+ ├── utils/             小工具
+ └── config/            環境設定
 ```
 
 ---
