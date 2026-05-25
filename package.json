@@ -2,10 +2,11 @@
   "name": "backend-cloudrun",
   "version": "1.0.0",
   "description": "核心 API Server。",
-  "main": "src/server.js",
+  "main": "backend-cloudrun/src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node src/server.js"
+    "dev": "node backend-cloudrun/src/server.js",
+    "start": "node backend-cloudrun/src/server.js"
   },
   "keywords": [],
   "author": "",
