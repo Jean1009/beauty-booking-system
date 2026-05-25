@@ -6,11 +6,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/health", (req, res) => {
-  res.json({
-    ok: true,
+app.get("/", (req, res) => {
+    res.send("Cloud Run V2 is running 🚀");
   });
-});
+
+// app.get("/api/health", (req, res) => {
+//   res.json({
+//     ok: true,
+//   });
+// });
 
 app.post("/api/bookings", (req, res) => {
   console.log(req.body);
