@@ -10,11 +10,12 @@ app.get("/", (req, res) => {
     res.send("Cloud Run V2 is running 🚀");
   });
 
-// app.get("/api/health", (req, res) => {
-//   res.json({
-//     ok: true,
-//   });
-// });
+app.get("/api/health", (req, res) => {
+    res.json({
+      ok: true,
+      message: "API is healthy 🚀"
+    });
+});
 
 app.post("/api/bookings", (req, res) => {
   console.log(req.body);
